@@ -5,6 +5,6 @@ Type = Package
 Target = *
 
 [Action]
-Description = Labelling files with source=<package>
+Description = Labeling files
 When = PostTransaction
-Exec = /usr/local/bin/gen-pacman-tid
+Exec = /usr/local/bin/unpacman-label %PKG%
