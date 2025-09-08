@@ -9,4 +9,4 @@
 - Simple, familiar and Arch-focused.
 
 ## How does it work
-When you call pacman command to install or update a package, trought hooks system a label (unpacman-label) is attached to all files that comes from that same package
+When you call pacman command to install or update a package, trought hooks system a label (unpacman-label) is attached to all files that comes from that same package ...
