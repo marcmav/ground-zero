@@ -1,3 +1,4 @@
 # ignore:
 tests.py
 unpacman.txt
+__pycache__
