@@ -1,2 +1,17 @@
 #!/usr/bin/env python3
 
+import subprocess
+
+
+def get_files(pkg):
+    # Run `pacman -Qlq <pkg>` to get the files
+    try:
+        result = subprocess.run(
+            ["pacman", "-Qlq", pkg],
+            capture_output=True, text=True, check=True
+        )
+        return result.stdout.splitlines()
+    except subprocess.CalledProcessError:
+        print(f"[Unpacman] Failed to list files for {pkg}", file=result.stderr)
+        return []
+
