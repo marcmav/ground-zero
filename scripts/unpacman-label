@@ -18,5 +18,4 @@ def get_files(pkg):
 
 def label_file(file, pkg):
     # For now, im just printing (later ill implement: setfattr or DB tagging)
-    print(f"  tagging: {file} (source-tag={pkg})")
-    
+    print(f"  Tagging: {file} (source-tag={pkg})")
