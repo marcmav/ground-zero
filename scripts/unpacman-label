@@ -15,3 +15,8 @@ def get_files(pkg):
         print(f"[Unpacman] Failed to list files for {pkg}", file=result.stderr)
         return []
 
+
+def label_file(file, pkg):
+    # For now, im just printing (later ill implement: setfattr or DB tagging)
+    print(f"  tagging: {file} (source-tag={pkg})")
+    
