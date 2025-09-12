@@ -18,4 +18,4 @@ Pacman is a powerful package manager, but sometimes uninstalling a package leave
 
 ---
 
-⚠️ Project status: paused — not under active development right now.
+⚠️ **Project status:** paused — not under active development right now.
