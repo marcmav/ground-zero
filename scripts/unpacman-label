@@ -22,9 +22,9 @@ def get_package_files(pkg):
         return []
 
 def label_file(file_path, pkg):
-    """Set xattr label on a single file"""
+    """Set xattr label on a single file if it exists and is a file"""
     if not os.path.isfile(file_path):
-        return  # skip directories or missing files
+        return  # skip directories and missing files
     try:
         xattr.setxattr(file_path, b"user.ULsource", pkg.encode())
     except Exception as e:
@@ -35,9 +35,12 @@ def label_package(pkg):
     files = get_package_files(pkg)
     if not files:
         return
+    count = 0
     for f in files:
-        label_file(f, pkg)
-    print(f"Labeled {len(files)} files for package '{pkg}'.")
+        if os.path.isfile(f):
+            label_file(f, pkg)
+            count += 1
+    print(f"Labeled {count} files for package '{pkg}'.")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
