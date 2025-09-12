@@ -10,7 +10,7 @@ It is designed to completely remove packages installed via pacman — including 
 - Simple, familiar and Arch-focused design.
 
 ## How does it work
-When you call pacman command to install or update a package, trought hooks system a metadata will be attached to each file that comes from that package ...
+When you call pacman command to install or update a package, trough hooks system a metadata will be attached to each file that comes from that package ...
 
 ## Why This Project
 Pacman is a powerful package manager, but sometimes uninstalling a package leaves traces behind.  
