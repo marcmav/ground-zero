@@ -6,7 +6,7 @@ It is designed to completely remove packages installed via pacman — including 
 
 ## Features
 - Full removal of packages installed via pacman;
-- Tracking of changes for clean and reliable uninstalls.  
+- Tracking of changes for clean and reliable uninstalls;
 - Simple, familiar and Arch-focused design.
 
 ## How does it work
