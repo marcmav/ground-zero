@@ -52,4 +52,6 @@ cd /etc/pacman.d/hooks
 Contributions are welcome. The project is currently paused, so changes may not be merged immediately.  
 To contribute, fork the repository, make your changes in a branch, and open a Pull Request.
 
+---
+
 ⚠️ **Project status:** paused — not under active development.
