@@ -1,5 +1,5 @@
 # ignore:
-__pycache__
-src/tests.py
-unpacman-idea
 .venv
+__pycache__
+unpacman-idea
+src/tests.py
