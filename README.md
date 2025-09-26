@@ -27,7 +27,7 @@ Whenever you run a pacman command to install or update a package, the hooks syst
 ---
 
 ## Installation
-> ⚠️ **Note:** This project is currently paused and not under active development.  
+> **Note:** This project is currently paused and not under active development.  
 
 If you still want to try it out:
 
