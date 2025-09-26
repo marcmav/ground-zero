@@ -6,9 +6,9 @@
 It is designed to completely remove packages installed via pacman — including dependencies, extra files, logs, configuration, and metadata — ensuring that everything introduced by a package can be fully undone.
 
 ## Features
-- Full removal of packages installed via pacman.
-- Tracking of changes for clean and reliable uninstalls.
-- Simple, familiar and Arch-focused design.
+- Full removal of packages installed via pacman
+- Tracking of changes for clean and reliable uninstalls
+- Simple, familiar and Arch-focused design
 
 ---
 
@@ -21,8 +21,9 @@ If you're like me, you chose Arch Linux exactly because you want full control ov
 
 ---
 
-## How it works?
-Whenever you run a pacman command to install or update a package, the hooks system attaches metadata to every file, making them traceable even if the main package is later removed...
+## How It works?
+Whenever you run a pacman command to install or update a package, the hooks system attaches metadata to every file, making them traceable even if the main package is later removed.
+...
 
 ---
 
