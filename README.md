@@ -26,4 +26,22 @@ Whenever you run a pacman command to install or update a package, the hooks syst
 
 ---
 
-⚠️ **Project status:** paused — not under active development right now.
+## Installation
+> ⚠️ **Note:** This project is currently paused and not under active development.  
+
+If you still want to try it out:
+
+```bash
+# Clone the repository
+git clone https://github.com/marciomavungo/unpacman.git
+cd unpacman
+
+# Install dependencies
+sudo pacman -S python-pip
+pip install -r requirements.txt
+
+# Create a hook
+sudo mkdir -p /etc/pacman.d/hooks
+cd /etc/pacman.d/hooks
+...
+```
