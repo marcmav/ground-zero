@@ -23,36 +23,3 @@ If you're like me, you chose Arch Linux exactly because you want full control ov
 
 ## How It works?
 Whenever you run a pacman command to install or update a package, the hooks system attaches metadata to every file, making them traceable even if the main package is later removed.
-
-...
-
----
-
-## Installation
-> **Note:** This project is currently paused and not under active development.  
-
-If you still want to try it out:
-
-```bash
-# Clone the repository
-git clone https://github.com/marciomavungo/unpacman.git
-cd unpacman
-
-# Install dependencies
-sudo pacman -S python-pip
-pip install -r requirements.txt
-
-# Create a hook
-sudo mkdir -p /etc/pacman.d/hooks
-cd /etc/pacman.d/hooks
-...
-```
----
-
-## Contributing
-Contributions are welcome. The project is currently paused, so changes may not be merged immediately.  
-To contribute, fork the repository, make your changes in a branch, and open a Pull Request.
-
----
-
-⚠️ **Project status:** paused — not under active development.
