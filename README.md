@@ -17,7 +17,3 @@ If you're like me, you chose Arch Linux exactly because you want full control ov
 
 **unpacman** was created to explore whether it’s possible to go one step further: to provide a complete rollback mechanism, like pressing Ctrl+Z for your system.
 
----
-
-## How It works?
-Whenever you run a pacman command to install or update a package, the hooks system attaches metadata to every file, making them traceable even if the main package is later removed.
