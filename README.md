@@ -3,7 +3,9 @@
 **unpacman** is a tool for Arch Linux and Arch-based distributions that aims to provide a true "undo" for pacman operations.  
 It is designed to completely remove packages installed via pacman — including dependencies, extra files, logs, configuration, and metadata — ensuring that everything introduced by a package can be fully undone.
 
-## Features
+A pacman rollback tool for Arch Linux and Arch based distributions that fully reverses package installations. It is designed to completely remove packages installed via pacman, including dependencies, logs, config files and metadata, leaving no trace
+
+### Features
 - Full removal of packages installed via pacman
 - Tracking of changes for clean and reliable uninstalls
 - Simple, familiar and Arch-focused design
@@ -14,3 +16,4 @@ Pacman is a powerful package manager, but sometimes uninstalling a package leave
 If you're like me, you chose Arch Linux exactly because you want full control over your machine.
 
 **unpacman** was created to explore whether it’s possible to go one step further: to provide a complete rollback mechanism, like pressing Ctrl+Z for your system.
+
