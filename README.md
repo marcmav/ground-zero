@@ -1,6 +1,4 @@
-# unpacman
-
-### The undo button for pacman.
+## vestigia
 
 **unpacman** is a tool for Arch Linux and Arch-based distributions that aims to provide a true "undo" for pacman operations.  
 It is designed to completely remove packages installed via pacman — including dependencies, extra files, logs, configuration, and metadata — ensuring that everything introduced by a package can be fully undone.
@@ -12,7 +10,7 @@ It is designed to completely remove packages installed via pacman — including 
 
 ---
 
-## Why This Project?
+### Why This Project?
 Pacman is a powerful package manager, but sometimes uninstalling a package leaves behind residual files. These unused files waste disk space and are hard to trace, making full cleanup difficult.
  
 If you're like me, you chose Arch Linux exactly because you want full control over your machine.
