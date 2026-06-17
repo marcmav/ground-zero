@@ -28,7 +28,7 @@ Recommendations:
 
 Linux
 
-######(hm actually, linux is not an operating system, its a kernel.)
+###### (hm actually, linux is not an operating system, its a kernel.)
 
 ("anyways")
 
@@ -36,7 +36,7 @@ Linux
 
 Arch Linux
 
-#####(i also use fedora and debian on my other machines, why am i referring only arch? you may ask. "IT'S THE BEST DISTRO EVER bro!!", why do i think that? you may ask. "its mostly just hype")
+##### (i also use fedora and debian on my other machines, why am i referring only arch? you may ask. "IT'S THE BEST DISTRO EVER bro!!", why do i think that? you may ask. "its mostly just hype")
 
 Pros:
 - Minimal by default
