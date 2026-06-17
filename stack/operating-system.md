@@ -44,23 +44,8 @@ Cons:
 <br/>
 <br/>
 
-Not Recommended
-
-End-of-Life Systems
-
-Operating systems that no longer receive security updates should not be used.
-
-Examples:
-- Windows 7
-- Ubuntu releases past support
-- Unmaintained Linux distributions
-###### "i think anything windows should be on this list too"
-
-<br/>
-<br/>
-
 Baseline
 
 Current Recommendation:
 - Arch Linux (for **chad** users)
-- Fedora/Debian
+- Fedora / Debian
