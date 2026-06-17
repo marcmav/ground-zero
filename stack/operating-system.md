@@ -7,7 +7,6 @@ Purpose:
 The operating system is the foundation of the security stack. Every other security control depends on the OS enforcing permissions, isolation, updates, and resource access.
 
 <br/>
-<br/>
 
 Requirements:
 
@@ -19,7 +18,6 @@ Requirements:
 > - Allow user control
 > - Have a large security-conscious community
 
-<br/>
 <br/>
 
 Recommendations:
@@ -41,7 +39,6 @@ Cons:
 > - Requires maintenance
 > - User mistakes can reduce security
 
-<br/>
 <br/>
 
 Baseline
