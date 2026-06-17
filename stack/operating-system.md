@@ -11,8 +11,6 @@ The operating system is the foundation of the security stack. Every other securi
 
 Requirements:
 
-An operating system should:
-
 - Receive frequent security updates
 - Support full-disk encryption
 - Provide strong process isolation
@@ -27,15 +25,12 @@ An operating system should:
 Recommendations:
 
 Linux
-
 ###### hm actually, linux is not an operating system, its a kernel.
-
 ###### "anyways bro"
 
 <br/>
 
 Arch Linux
-
 ###### i also use fedora and debian on my other machines, why am i referring only arch? you may ask. "IT'S THE BEST DISTRO EVER bro!!", why do i think that? you may ask. "its mostly just hype"
 
 Pros:
