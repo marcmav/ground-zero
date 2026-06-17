@@ -20,7 +20,7 @@ The operating system is the foundation of the security stack. Every other securi
 
 <br/>
 
-#### Recommendations:
+#### Pick:
 
 ##### Linux
 ###### hm actually, linux is not an operating system, its a kernel.
@@ -43,6 +43,6 @@ The operating system is the foundation of the security stack. Every other securi
 
 #### Baseline
 
-##### Current Recommendation:
-> - Arch Linux (for **chad** users)
+##### Recommendation:
+> - Arch Linux (for **chads**)
 > - Fedora / Debian
