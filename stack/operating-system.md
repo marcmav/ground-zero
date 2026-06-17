@@ -2,13 +2,13 @@ Operating System
 
 <br/>
 
-Purpose:
+## Purpose:
 
 The operating system is the foundation of the security stack. Every other security control depends on the OS enforcing permissions, isolation, updates, and resource access.
 
 <br/>
 
-Requirements:
+## Requirements:
 
 > - Receive frequent security updates
 > - Support full-disk encryption
@@ -20,14 +20,14 @@ Requirements:
 
 <br/>
 
-Recommendations:
+## Recommendations:
 
 Linux
 ###### hm actually, linux is not an operating system, its a kernel.
 ###### "whatever bro"
 
 Arch Linux
-###### i also use fedora and debian on my other machines, why am i referring only arch? you may ask. "IT'S THE BEST DISTRO EVER bro!!", why do i think that? you may ask. "its mostly just hype"
+###### i also use fedora and debian on my other machines, why am i referring only arch? you may ask. "because IT'S THE BEST DISTRO EVER bro!!", why do i think so? you may ask. "its mostly just hype"
 
 Pros:
 > - Minimal by default
@@ -41,7 +41,7 @@ Cons:
 
 <br/>
 
-Baseline
+## Baseline
 
 Current Recommendation:
 > - Arch Linux (for **chad** users)
