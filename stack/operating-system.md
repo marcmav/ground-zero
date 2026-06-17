@@ -27,6 +27,7 @@ An operating system should:
 Recommendations:
 
 Linux
+
 (hm actually, linux is not an operating system, its a kernel.)
 
 (anyways)
@@ -34,6 +35,7 @@ Linux
 <br/>
 
 Arch Linux
+
 (i also use fedora and debian on my other machines, why am i referring only arch? you may ask. IT'S THE BEST DISTRO EVER bro)
 
 Pros:
