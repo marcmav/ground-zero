@@ -20,14 +20,14 @@ The operating system is the foundation of the security stack. Every other securi
 
 <br/>
 
-#### Pick:
+#### My choice:
 
 ##### Linux
 ###### hm actually, linux is not an operating system, its a kernel.
 ###### "whatever bro"
 
 ##### Arch Linux
-###### i also use fedora and debian on my other machines, why am i referring only arch? you may ask. "because IT'S THE BEST DISTRO EVER bro!!", why do i think so? you may ask. "its mostly just hype"
+###### i also use fedora and debian on my other machines, then why am i referring only arch? you may ask. "because IT'S THE BEST DISTRO EVER bro!!", why do i think so? you may ask. "its mostly just hype"
 
 ##### Pros:
 > - Minimal by default
@@ -44,5 +44,5 @@ The operating system is the foundation of the security stack. Every other securi
 #### Baseline
 
 ##### Recommendation:
-> - Arch Linux (for **chads**)
+> - Arch Linux (for **CHADs**)
 > - Fedora / Debian
