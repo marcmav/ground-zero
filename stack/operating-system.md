@@ -1,11 +1,13 @@
 Operating System
 
+<br/>
 
 Purpose:
 
 The operating system is the foundation of the security stack. Every other security control depends on the OS enforcing permissions, isolation, updates, and resource access.
 
-
+<br/>
+<br/>
 
 Requirements:
 
