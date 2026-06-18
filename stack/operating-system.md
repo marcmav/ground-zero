@@ -43,6 +43,8 @@ The operating system is the foundation of the security stack. Every other securi
 
 #### Baseline
 
+You must choose an OS that provides you maximum control over it without much complexity, hence why i chose Arch Linux, it is minimal by default (vanilla coming with only a terminal), its open source, utilizes a continuous rolling release model and memes are just great; 
+
 ##### Recommendation:
 > - Arch Linux (for **CHADs**)
 > - Fedora / Debian
