@@ -23,7 +23,7 @@ The operating system is the foundation of the security stack. Every other securi
 #### My choice:
 
 ##### Linux
-###### hm actually, linux is not an operating system, its a kernel.
+###### hm actually, linux is not an operating system, its a kernel...
 ###### "whatever bro"
 
 ##### Arch Linux
