@@ -14,3 +14,6 @@ Security is executed sequentially from the absolute core hardware outward to my 
                 [ Layer 1: Compute ] --- Operating System
                     [ Layer 0: Core ] --- Firmware/UEFI
 ```
+
+### Layer 0: Core
+
