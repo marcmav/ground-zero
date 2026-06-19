@@ -4,7 +4,7 @@ A playbook of the architectural root of my security model. It defines the founda
 
 ## *The Defense-in-Depth Model*
 
-Security is engineered sequentially from the system's lowest trust boundary outward to my digital identity. If a lower layer is compromised, the structural integrity of every layer above it is void
+Security is engineered sequentially from the system's lowest trust boundary outward to my digital identity. If a lower layer is compromised, the structural integrity of every layer above it is void.
 
 ```
 [ Layer 5: Alias ] --- Identity
