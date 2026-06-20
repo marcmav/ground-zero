@@ -4,6 +4,7 @@ bedrock
 
 A playbook of the architectural root of my security model. It defines the foundational layers, principles and controls that every system must satisfy before it can be considered trusted.
 
+==========================
 The Defense-in-Depth Model
 ==========================
 
@@ -16,6 +17,7 @@ Security is engineered sequentially from the system's lowest trust boundary outw
                 [ Layer 1: Compute ] --- Operating System
                     [ Layer 0: Core ] --- Firmware/UEFI
 
+=============
 Layer 0: Core
 =============
 
