@@ -17,3 +17,28 @@ Security is engineered sequentially from the system's lowest trust boundary outw
 
 ### *Layer 0: Core*
 
+Linux kernel
+============
+
+The Linux kernel is the core of any Linux operating system. It manages hardware,
+system resources, and provides the fundamental services for all other software.
+
+Quick Start
+-----------
+
+* Report a bug: See Documentation/admin-guide/reporting-issues.rst
+* Get the latest kernel: https://kernel.org
+* Build the kernel: See Documentation/admin-guide/quickly-build-trimmed-linux.rst
+* Join the community: https://lore.kernel.org/
+
+Essential Documentation
+-----------------------
+
+All users should be familiar with:
+
+* Building requirements: Documentation/process/changes.rst
+* Code of Conduct: Documentation/process/code-of-conduct.rst
+* License: See COPYING
+
+Documentation can be built with make htmldocs or viewed online at:
+https://www.kernel.org/doc/html/latest/
