@@ -15,7 +15,9 @@ Security is engineered sequentially from the system's lowest trust boundary outw
         [ Layer 3: Gateway ] --- Browser, Search Engine
             [ Layer 2: Network ] --- Firewall, DNS
                 [ Layer 1: Compute ] --- Operating System
-                    [ Layer 0: Core ] --- Firmware
+                    [ Layer 0: Core ] --- Firmware, Bootloader
+
+(Removed properties that are outside my scope)
 
 =============
 Layer 0: Core
