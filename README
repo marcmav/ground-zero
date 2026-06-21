@@ -19,6 +19,7 @@ Security is engineered sequentially from the system's lowest trust boundary outw
 
 {Didn't refer properties that are outside my scope (properties that requires external access such as routers)}
 
+
 =============
 Layer 0: Core
 =============
@@ -26,13 +27,13 @@ Layer 0: Core
 The Core layer represents the lowest trust boundary of a system. It's the first code executed when the machine powers on, it consists of the firmware, the software responsible for initializing hardware and the bootloader which is responsible to execute the operating system. If this layer is compromised, no software control above it can be trusted.
 
 Components
-----------
+==========
 
 > - Firmware
 > - Bootloader
 
 Principles
-----------
+==========
 
 > - Ensure only trusted code executes during system startup
 > - Prevent unauthorized firmware modification
@@ -40,14 +41,28 @@ Principles
 > - Minimize exposure to known firmware vulnerabilities
 
 Controls
---------
+========
 
-> - Keep firmware up to date
-> - Enable Secure Boot
-> - Lock firmware settings (with a unique password)
-> - Disable booting from external media (boot order set to internal drive only)
+> - Firmware Updates
+    ----------------
+Firmware is software. It has CVEs. It must be updated like any other component in the stack.
 
-{All controls depend on firmware password, if a password is not set, external physical access is game over}
+> - Secure Boot
+    -----------
+Enabling it ensures only cryptographically signed bootloaders are allowed to execute. Prevents bootkits and rootkits from loading before the OS has a chance to defend itself.
+
+> - Firmware Password
+    -------------
+Locks firmware settings behind a password. Without it, anyone with physical access can disable Secure Boot, change the boot order, or boot from external media.
+
+> - Boot Order
+    ----------
+Set to internal drive only. Disabling USB and network boot eliminates the ability to boot a live OS or run cold boot attacks against the machine.
+
+> - TPM (Trusted Platform Module)
+    -----------------------------
+If the hardware supports it, the TPM stores encryption keys and binds them to the hardware state. Used in conjunction with full-disk encryption to ensure the system only decrypts in a known-good state.
+
 
 ================
 Layer 1: Compute
