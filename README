@@ -17,8 +17,6 @@ Security is engineered sequentially from the system's lowest trust boundary outw
                 [ Layer 1: Compute ] --- Operating System
                     [ Layer 0: Core ] --- Firmware, Bootloader
 
-{Didn't refer properties that are outside my scope (properties that requires external access such as routers)}
-
 
 =============
 Layer 0: Core
