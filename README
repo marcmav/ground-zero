@@ -23,4 +23,51 @@ Security is engineered sequentially from the system's lowest trust boundary outw
 Layer 0: Core
 =============
 
+The Core layer represents the lowest trust boundary of a system. It consists of the firmware responsible for initializing hardware and transferring execution to the operating system.
+
+Because every subsequent layer depends on code executed at this stage, compromise of the Core layer invalidates the trustworthiness of the entire system.
+
+Components
+----------
+
+> - Firmware
+> - UEFI
+> - Secure Boot
+
+Objectives
+----------
+
+> - Ensure only trusted code executes during system startup
+> - Prevent unauthorized firmware modification
+> - Maintain firmware integrity
+> - Minimize exposure to known firmware vulnerabilities
+
+Controls
+--------
+
+> - Keep firmware up to date
+> - Enable Secure Boot where appropriate
+> - Protect firmware settings with a strong password
+> - Disable unused boot options
+> - Disable booting from external media when unnecessary
+
+Assumptions
+-----------
+
+> - Physical access is equivalent to full control
+> - Firmware can be trusted only if its integrity is maintained
+> - Higher security layers cannot compensate for a compromised Core layer
+
+Validation
+----------
+
+> - Firmware version is current
+> - Secure Boot status is verified
+> - Unauthorized boot devices are disabled
+> - Firmware configuration is documented and reviewed
+
+================
+Layer 1: Compute
+================
+
 
