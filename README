@@ -35,10 +35,7 @@ Components
 Principles
 ----------
 
-> - Ensure only trusted code executes during system startup
-> - Prevent unauthorized firmware modification
-> - Maintain firmware integrity
-> - Minimize exposure to known firmware vulnerabilities
+Physical access to an unlocked Core is absolute compromise. Every layer above this one assumes Core has not been tampered with.
 
 Controls
 --------
