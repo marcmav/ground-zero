@@ -69,7 +69,7 @@ Controls
     Bootloaders are software and must receive security updates.
 
 > - Bootloader Integrity
-    The bootloader must originate from a trusted source and remain unmodified.
+    The bootloader must originate from a trusted source and remain unmodified. (I recommend an open-source bootloader such as Limine Bootloader).
 
 > - Single Trusted Boot Path (if possible)
     Maintain a single, intentional boot path. Every additional bootloader, operating system, or boot entry increases complexity and attack surface.
