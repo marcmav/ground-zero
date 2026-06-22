@@ -35,7 +35,7 @@ Components
 Principle
 ---------
 
-Physical access to an unlocked Core is absolute compromise. Every layer above this one assumes Core has not been tampered with.
+Physical access to an unprotected Core is equivalent to full system compromise. Every layer above this one assumes the Core has not been tampered with.
 
 ---------
 Objective
@@ -48,30 +48,30 @@ Controls
 --------
 
 > - Firmware Updates
-    Firmware is software. It has CVEs, it must be updated like any other component in the stack.
+    Firmware is software. It has vulnerabilities and CVEs and must be updated like any other component in the stack.
 
 > - Firmware Password
-    Locks firmware settings behind a password. (Without it, anyone with physical access can disable Secure Boot, change the boot order and boot from external media).
+    Protects firmware settings from unauthorized modification. (Without it, anyone with physical access can disable Secure Boot, change the boot order and boot from external media).
 
 > - Secure Boot
     Enabling it ensures only cryptographically signed bootloaders are allowed to execute. (Prevents bootkits and rootkits from loading before the OS has a chance to defend itself).
 
 > - Boot Order
-    Set to internal drive only. (Disabling USB and network boot eliminates the ability to boot a live OS or run cold boot attacks against the machine)
+    Restrict boot sources to only those required for normal operation. External and network boot should be disabled when not needed. (Disabling USB and network boot eliminates the ability to boot a live OS or run cold boot attacks against the machine)
 
 > - Component Minimization
-    Disable firmware-level features and interfaces that are not required for the system's intended purpose. Every enabled component increases the attack surface and should be justified. (Disable Network Stack, internal microphones and webcams).
+    Disable firmware-level features and interfaces that are not required for the system's intended purpose. Every enabled component increases the attack surface and should be justified.
 
 > - TPM (Trusted Platform Module)
-    If the hardware supports it, the TPM stores encryption keys and binds them to the hardware state. (Used in conjunction with full-disk encryption to bind decryption keys to a measured boot state, helping detect unauthorized modifications during startup).
+    If the hardware supports it, the TPM can securely store encryption keys and binds them to the hardware state. (Used in conjunction with full-disk encryption to bind decryption keys to a measured boot state, helping detect unauthorized modifications during startup).
 
 > - Bootloader Updates
     Bootloaders are software and must receive security updates.
 
 > - Bootloader Password
-    Restricts access to boot entries and configuration editing at runtime. (Without it, kernel parameters can be appended at boot to bypass OS-level security controls entirely).
+    Restricts unauthorized modification of boot entries and boot parameters during startup. (Without it, kernel parameters can be appended at boot to bypass OS-level security controls entirely).
 
-> - Single Trusted Boot Path (if possible)
+> - Single Trusted Boot Path
     Maintain a single, intentional boot path. Every additional bootloader, operating system, or boot entry increases complexity and attack surface.
 
 > - Immutable Bootloader Configuration
