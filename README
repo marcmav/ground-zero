@@ -39,7 +39,7 @@ Controls
 --------
 
 > - Firmware Updates
-Firmware is software. It has CVEs, it must be updated like any other component in the stack. (Whenever there is an update).
+Firmware is software. It has CVEs, it must be updated like any other component in the stack.
 
 > - Firmware Password
 Locks firmware settings behind a password. (Without it, anyone with physical access can disable Secure Boot, change the boot order and boot from external media).
