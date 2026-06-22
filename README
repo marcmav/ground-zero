@@ -51,7 +51,7 @@ Enabling it ensures only cryptographically signed bootloaders are allowed to exe
 Set to internal drive only. (Disabling USB and network boot eliminates the ability to boot a live OS or run cold boot attacks against the machine)
 
 > - Component Minimization
-All unneeded or legacy hardware interfaces embedded on the mainboard must be disabled at the firmware layer to reduce the local attack surface. (Disable Intel AMT/Management Engine, integrated fingerprint scanners, internal microphones and webcams).
+All unneeded or legacy hardware interfaces embedded on the mainboard must be disabled at the firmware layer to reduce the local attack surface. (Disable Network Stack, integrated fingerprint scanners, internal microphones and webcams).
 
 > - TPM (Trusted Platform Module)
 If the hardware supports it, the TPM stores encryption keys and binds them to the hardware state. Used in conjunction with full-disk encryption to ensure the system only decrypts in a known-good state.
