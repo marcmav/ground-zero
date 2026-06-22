@@ -1,6 +1,6 @@
-=========
-=bedrock=
-=========
+=======
+bedrock
+=======
 
 A playbook of the architectural root of my security model. It defines the foundational layers, principles and controls that every system must satisfy before it can be considered trusted.
 
@@ -32,16 +32,16 @@ Components
 > - Bootloader
 
 ---------
-Objective
----------
-
-Establish a trustworthy startup chain and ensure that only authorized code executes before the operating system gains control.
-
----------
 Principle
 ---------
 
 Physical access to an unlocked Core is absolute compromise. Every layer above this one assumes Core has not been tampered with.
+
+---------
+Objective
+---------
+
+Establish a trustworthy startup chain and ensure that only authorized code executes before the operating system gains control.
 
 --------
 Controls
