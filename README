@@ -30,6 +30,11 @@ Components
 > - Firmware
 > - Bootloader
 
+Objective
+---------
+
+Establish a trustworthy startup chain and ensure that only authorized code executes before the operating system gains control.
+
 Principle
 ---------
 
@@ -54,10 +59,10 @@ Enabling it ensures only cryptographically signed bootloaders are allowed to exe
 Set to internal drive only. (Disabling USB and network boot eliminates the ability to boot a live OS or run cold boot attacks against the machine)
 
 > - Component Minimization
-All unneeded or legacy hardware interfaces embedded on the mainboard must be disabled at the firmware layer to reduce the local attack surface. (Disable Network Stack, integrated fingerprint scanners, internal microphones and webcams).
+Disable firmware-level features and interfaces that are not required for the system's intended purpose. Every enabled component increases the attack surface and should be justified. (Disable Network Stack, internal microphones and webcams).
 
 > - TPM (Trusted Platform Module)
-If the hardware supports it, the TPM stores encryption keys and binds them to the hardware state. (Used in conjunction with full-disk encryption to ensure the system only decrypts in a known-good state).
+If the hardware supports it, the TPM stores encryption keys and binds them to the hardware state. (Used in conjunction with full-disk encryption to bind decryption keys to a measured boot state, helping detect unauthorized modifications during startup).
 
 
 ================
