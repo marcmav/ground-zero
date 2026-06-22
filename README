@@ -69,7 +69,7 @@ Controls
     Bootloaders are software and must receive security updates.
 
 > - Bootloader Password
-    Protect bootloader configuration files from unauthorized modification. (Without it changes to boot parameters can disable security mechanisms, bypass protections and alter startup behavior).
+    Restricts access to boot entries and configuration editing at runtime. (Without it, kernel parameters can be appended at boot to bypass OS-level security controls entirely).
 
 > - Single Trusted Boot Path (if possible)
     Maintain a single, intentional boot path. Every additional bootloader, operating system, or boot entry increases complexity and attack surface.
