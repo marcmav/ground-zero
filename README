@@ -47,7 +47,9 @@ Establish a trustworthy startup chain and ensure that only authorized code execu
 Controls
 --------
 
-> - Firmware Updates
+Firmware Updates
+~~~~~~~~~~~~~~~~
+
 Firmware is software. It has CVEs, it must be updated like any other component in the stack.
 
 > - Firmware Password
