@@ -107,7 +107,7 @@ Controls
     Choose an open-source, actively maintained operating system with a transparent security model. (Closed-source operating systems cannot be audited and phone home by design).
 
 > - Minimal Installation
-    Install only what the system requires to function. Every package is a potential vulnerability. (Uninstall anything that was not explicitly requested).
+    The operating system must be built from a minimal base (e.g., a vanilla terminal installation) avoiding pre-baked monolithic desktop environments and only what the system requires to function. (Every package is a potential vulnerability).
 
 > - System Updates
     The operating system and installed software must be updated regularly. Vulnerabilities lose much of their value once patched.
@@ -116,13 +116,25 @@ Controls
     Protect data at rest from unauthorized access. (Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions).
 
 > - Service Minimization
-    Audit and disable all system services that are not required. Every running service is an attack surface.
+    Disable or remove services that are not required. Every running service is an attack surface.
 
-> - Mandatory Access Control
-    Enforce process-level access controls beyond standard Unix permissions. Limits the blast radius of a compromised process. (AppArmor or SELinux).
+> - Application Minimization
+    Install only software that serves a defined purpose. Unnecessary software increases complexity and attack surface.
+
+> - Secure Software Sources
+    Install software from trusted and verifiable sources. Avoid unofficial repositories and untrusted installation scripts.
+
+> - Authentication
+    Protect local accounts with strong passwords or passphrases and require authentication before granting access to the system.
+
+> - Least Privilege
+    Daily activities should be performed as a standard user. Root privileges should only be used when required.
 
 > - Application Sandboxing
     Isolate high-risk applications from the rest of the system. (A compromised browser or document viewer should not have access to the full filesystem). (Firejail or Bubblewrap).
+
+> - Mandatory Access Control
+    Enforce process-level access controls beyond standard Unix permissions. Limits the blast radius of a compromised process. (AppArmor or SELinux).
 
 > - SSH Hardening
     Disable password authentication. Use key-based authentication only. Disable root login. Restrict access to known keys.
@@ -130,4 +142,6 @@ Controls
 > - Audit and Hardening Verification
     Periodically run a system hardening audit to identify misconfigurations and gaps. (Lynis).
 
+> - Backup Readiness
+    The operating system must support reliable backup and recovery procedures without compromising data integrity.
 
