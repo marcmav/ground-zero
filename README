@@ -111,7 +111,7 @@ Controls
     Install only what the system requires to function. Every package is a potential vulnerability. (Uninstall anything that was not explicitly requested).
 
 > - System Updates
-    The kernel and all userland packages must be kept up to date. Unpatched software is the most common initial access vector.
+    The kernel and all userland packages must be kept up to date. (Unpatched software is the most common initial access vector).
 
 > - Full-Disk Encryption (LUKS)
     Encrypt all data at rest using LUKS. Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions.
@@ -123,11 +123,12 @@ Controls
     Enforce process-level access controls beyond standard Unix permissions. Limits the blast radius of a compromised process. (AppArmor or SELinux).
 
 > - Application Sandboxing
-    Isolate high-risk applications from the rest of the system. A compromised browser or document viewer should not have access to the full filesystem. (Firejail or Bubblewrap).
+    Isolate high-risk applications from the rest of the system. (A compromised browser or document viewer should not have access to the full filesystem). (Firejail or Bubblewrap).
 
 > - SSH Hardening
-    Disable password authentication. Use key-based authentication only. Disable root login. Restrict access to known keys. (See templates/ssh-config.example).
+    Disable password authentication. Use key-based authentication only. Disable root login. Restrict access to known keys.
 
 > - Audit and Hardening Verification
     Periodically run a system hardening audit to identify misconfigurations and gaps. (Lynis).
+
 
