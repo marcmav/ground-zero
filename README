@@ -14,7 +14,7 @@ Security is engineered sequentially from the system's lowest trust boundary outw
     [ Layer 4: Credentials ] --- Password Manager, TOTP
         [ Layer 3: Gateway ] --- Browser, Search Engine
             [ Layer 2: Network ] --- Firewall, DNS
-                [ Layer 1: Compute ] --- Operating System
+                [ Layer 1: Compute ] --- Operating System, Storage
                     [ Layer 0: Core ] --- Firmware, Bootloader
 
 
@@ -79,55 +79,55 @@ Controls
 Layer 1: Compute
 ================
 
-The Compute layer represents the core execution environment of the system. It encompasses the operating system kernel, the initial ramdisk, the storage volumes, and user space process management. Once the Core layer transfers execution, Layer 1 is responsible for enforcing runtime resource isolation, cryptographic privacy of data at rest, and local permission boundaries. If this layer is compromised, an adversary can manipulate memory, steal user files, or subvert the gateway applications running above it.
+The Compute layer is the operating system. It is the first software layer with full visibility over hardware resources, user processes and system state. It enforces access controls, manages process isolation and mediates every interaction between software and hardware. If this layer is compromised, no application, credential or identity above it can be trusted.
 
 ----------
 Components
 ----------
 
-> - Storage (Data at Rest)
-> - Operating System (Kernel & User Space)
+> - Operating System
+> - Storage
 
 ---------
 Principle
 ---------
 
-No process or user space application may override kernel-level boundary controls. The operating system must enforce absolute isolation between processes and maintain a minimal local attack surface by executing only strictly necessary services.
+The operating system is the highest-privilege software layer on the machine. Every process, file and network connection is subject to its rules. A compromised Operating System is a compromised machine.
 
 ---------
 Objective
 ---------
 
-Protect data at rest through cryptographic enforcement, harden the execution runtime against local exploit vectors, and restrict process privileges to the absolute minimum required to function.
+Deploy a minimal, auditable and actively maintained operating system that enforces strict access controls and exposes the smallest possible attack surface.
 
 --------
 Controls
 --------
 
-> - Full-Disk Encryption (FDE)
-    All system partitions (root, home, and swap) MUST be encrypted using modern cryptographic standards (e.g., LUKS2 with aes-xts-plain64). (Ensures that if the device is lost, stolen, or powered down, data cannot be extracted via physical block analysis).
+> - Operating System Selection
+    Choose an open-source, actively maintained operating system with a transparent security model. (Closed-source operating systems cannot be audited and phone home by design).
 
-> - High-Entropy Key Derivation (Argon2id)
-    The PBKDF for the disk encryption password must utilize Argon2id to maximize memory-hard resistance against GPU-accelerated brute-force attacks.
+> - Minimal Installation
+    Install only what the system requires to function. Every package is a potential vulnerability. (Uninstall anything that was not explicitly requested).
 
-> - Minimal Attack Surface (Base Installation)
-    The operating system must be built from a minimal base (e.g., a vanilla terminal installation) avoiding pre-baked monolithic desktop environments. Unneeded system daemons, services, and background listeners must be absent or aggressively disabled.
+> - System Updates
+    The kernel and all userland packages must be kept up to date. Unpatched software is the most common initial access vector.
 
-> - Display Protocol Isolation (Wayland Native)
-    The graphical workspace must run natively on Wayland (e.g., via a modern compositor like Hyprland). Legacy X11 protocols are forbidden. (Enforces strict window isolation so background applications cannot sniff keystrokes or scrape screens belonging to other running applications).
+> - Full-Disk Encryption (LUKS)
+    Encrypt all data at rest using LUKS. Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions.
 
-> - Runtime Kernel Hardening (sysctl)
-    The kernel parameters must be explicitly tuned via sysctl configurations to restrict common exploitation vectors. (Disable unprivileged ptrace scoping, restrict dmesg logs to root, lock unprivileged user namespaces, and harden the BPF JIT compiler against speculative execution side-channels).
+> - Service Minimization
+    Audit and disable all system services that are not required. Every running service is an attack surface.
 
-> - Pluggable Authentication Modules (PAM) Hardening
-    Configure account lockout systems (e.g., pam_faillock) to lock user authentication interfaces for a specific cooldown period after consecutive failed login attempts. (Prevents local brute-force attacks against the user password via open terminals or display managers).
+> - Mandatory Access Control
+    Enforce process-level access controls beyond standard Unix permissions. Limits the blast radius of a compromised process. (AppArmor or SELinux).
 
-> - Proactive Package Lifecycle Management
-    The rolling release tree must be fully updated frequently to ensure rapid deployment of upstream security patches. Orphan packages and build dependencies must be aggressively audited and purged from the file system.
+> - Application Sandboxing
+    Isolate high-risk applications from the rest of the system. A compromised browser or document viewer should not have access to the full filesystem. (Firejail or Bubblewrap).
 
+> - SSH Hardening
+    Disable password authentication. Use key-based authentication only. Disable root login. Restrict access to known keys. (See templates/ssh-config.example).
 
-================
-Layer 2: Network
-================
-
+> - Audit and Hardening Verification
+    Periodically run a system hardening audit to identify misconfigurations and gaps. (Lynis).
 
