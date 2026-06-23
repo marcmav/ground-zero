@@ -14,7 +14,7 @@ Security is engineered sequentially from the system's lowest trust boundary outw
     [ Layer 4: Credentials ] --- Password Manager, TOTP
         [ Layer 3: Gateway ] --- Browser, Search Engine
             [ Layer 2: Network ] --- Firewall, DNS
-                [ Layer 1: Compute ] --- Operating System, Storage
+                [ Layer 1: Compute ] --- Operating System
                     [ Layer 0: Core ] --- Firmware, Bootloader
 
 
@@ -86,7 +86,6 @@ Components
 ----------
 
 > - Operating System
-> - Storage
 
 ---------
 Principle
@@ -111,10 +110,10 @@ Controls
     Install only what the system requires to function. Every package is a potential vulnerability. (Uninstall anything that was not explicitly requested).
 
 > - System Updates
-    The kernel and all userland packages must be kept up to date. (Unpatched software is the most common initial access vector).
+    The operating system and installed software must be updated regularly. Vulnerabilities lose much of their value once patched.
 
-> - Full-Disk Encryption (LUKS)
-    Encrypt all data at rest using LUKS. Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions.
+> - Full-Disk Encryption
+    Protect data at rest from unauthorized access. (Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions).
 
 > - Service Minimization
     Audit and disable all system services that are not required. Every running service is an attack surface.
