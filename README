@@ -74,9 +74,6 @@ Controls
 > - Single Trusted Boot Path
     Maintain a single, intentional boot path. Every additional bootloader, operating system, or boot entry increases complexity and attack surface.
 
-> - Immutable Bootloader Configuration
-    Set the bootloader configuration file to immutable after setup. (So it can't be modified without explicitly removing the immutable flag first. Requires root and deliberate action to change).
-
 
 ================
 Layer 1: Compute
