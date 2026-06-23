@@ -84,22 +84,26 @@ The Compute layer represents the core execution environment of the system. It en
 ----------
 Components
 ----------
+
 > - Storage (Data at Rest)
 > - Operating System (Kernel & User Space)
 
 ---------
 Principle
 ---------
+
 No process or user space application may override kernel-level boundary controls. The operating system must enforce absolute isolation between processes and maintain a minimal local attack surface by executing only strictly necessary services.
 
 ---------
 Objective
 ---------
+
 Protect data at rest through cryptographic enforcement, harden the execution runtime against local exploit vectors, and restrict process privileges to the absolute minimum required to function.
 
 --------
 Controls
 --------
+
 > - Full-Disk Encryption (FDE)
     All system partitions (root, home, and swap) MUST be encrypted using modern cryptographic standards (e.g., LUKS2 with aes-xts-plain64). (Ensures that if the device is lost, stolen, or powered down, data cannot be extracted via physical block analysis).
 
