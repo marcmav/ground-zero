@@ -110,7 +110,7 @@ Controls
     The operating system must be built from a minimal base (e.g., a vanilla terminal installation) avoiding pre-baked monolithic desktop environments and only what the system requires to function. (Every package is a potential vulnerability).
 
 > - System Updates
-    The operating system and installed software must be updated regularly. Vulnerabilities lose much of their value once patched.
+    The operating system and installed software must be updated regularly. (Vulnerabilities lose much of their value once patched).
 
 > - Full-Disk Encryption
     Protect data at rest from unauthorized access. (Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions).
