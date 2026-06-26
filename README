@@ -107,10 +107,10 @@ Controls
     Choose an open-source, actively maintained operating system with a transparent security model. (Closed-source operating systems cannot be audited and phone home by design).
 
 > - Minimal Installation
-    The operating system must be built from a minimal base (e.g., a vanilla terminal installation) installing only what the system requires to functions and avoiding pre-baked desktop environments.
+    The operating system must be built from a minimal base (e.g., a vanilla terminal installation) avoiding pre-baked desktop environments and only what the system requires to function. (Every package is a potential vulnerability).
 
 > - Service Minimization
-    Disable or remove services that are not required. (Every running service is an attack surface).
+    Disable or remove services that are not required or that won't be used. (Every running service is an attack surface).
 
 > - Full-Disk Encryption
     Protect data at rest from unauthorized access with a strong and unique password. (Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions).
