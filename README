@@ -107,7 +107,7 @@ Controls
     Choose an open-source, actively maintained operating system with a transparent security model. Open source enables independent review of the codebase and provides greater visibility into how the system operates.
 
 > - Minimal Installation
-    The operating system must be built from a minimal base (e.g., a vanilla terminal installation) avoiding pre-baked desktop environments and only what the system requires to function. (Every package is a potential vulnerability).
+    Build the operating system from the smallest practical installation and install only the components required for its intended purpose.
 
 > - Service Minimization
     Disable or remove services that are not required or that won't be used. (Every running service is an attack surface).
