@@ -104,7 +104,7 @@ Controls
 --------
 
 > - Operating System Selection
-    Choose an open-source, actively maintained operating system with a transparent security model. (Closed-source operating systems cannot be audited and phone home by design).
+    Choose an open-source, actively maintained operating system with a transparent security model. Open source enables independent review of the codebase and provides greater visibility into how the system operates.
 
 > - Minimal Installation
     The operating system must be built from a minimal base (e.g., a vanilla terminal installation) avoiding pre-baked desktop environments and only what the system requires to function. (Every package is a potential vulnerability).
