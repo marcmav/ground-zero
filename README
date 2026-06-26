@@ -113,7 +113,7 @@ Controls
     Disable or remove services that are not required or that won't be used. (Every running service is an attack surface).
 
 > - Full-Disk Encryption
-    Protect data at rest from unauthorized access with a strong and unique password. (Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions).
+    Protect data at rest from unauthorized access with a strong and unique password at boot required to decrypt it. (Without it, physical access to the drive is sufficient to read all data regardless of OS-level permissions).
 
 > - System Updates
     The operating system and installed software must be updated regularly. (Vulnerabilities lose much of their value once patched).
