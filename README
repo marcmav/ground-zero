@@ -128,7 +128,7 @@ Controls
     Daily activities should be performed as a standard user. Root privileges should only be used when required.
 
 > - Application Sandboxing
-    Isolate high-risk applications from the rest of the system. (A compromised browser or document viewer should not have access to the full filesystem). (Firejail or Bubblewrap).
+    Isolate high-risk applications from the rest of the system. (A compromised browser or document viewer should not have access to the full filesystem).
 
 > - Mandatory Access Control
     Enforce process-level access controls beyond standard Unix permissions. Limits the blast radius of a compromised process. (AppArmor or SELinux).
