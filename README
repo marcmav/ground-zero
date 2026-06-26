@@ -131,7 +131,7 @@ Controls
     Isolate high-risk applications from the rest of the system. (A browser should only have access to the network and downloads, a multimedia viewer should only have access to the file it is opening and nothing more).
 
 > - Mandatory Access Control
-    Enforce process-level access controls beyond standard Unix permissions. Limits the blast radius of a compromised process. (AppArmor or SELinux).
+    Enforce process-level access controls beyond standard Unix permissions. (Limits the blast radius of a compromised process).
 
 > - SSH Hardening
     Disable password authentication. Use key-based authentication only. Disable root login. Restrict access to known keys.
