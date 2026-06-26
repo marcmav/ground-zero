@@ -13,7 +13,7 @@ Security is engineered sequentially from the system's lowest trust boundary outw
 [ Layer 5: Alias ] --- Identity
     [ Layer 4: Credentials ] --- Password Manager, TOTP
         [ Layer 3: Gateway ] --- Browser, Search Engine
-            [ Layer 2: Network ] --- Firewall, DNS
+            [ Layer 2: Network ] --- Firewall, DNS, VPN
                 [ Layer 1: Compute ] --- Operating System
                     [ Layer 0: Core ] --- Firmware, Bootloader
 
@@ -128,16 +128,13 @@ Controls
     Daily activities should be performed as a standard user. Root privileges should only be used when required.
 
 > - SSH Hardening
-    Use key-based authentication only. Restrict access to known keys. Disable password authentication. Disable root login.
+    If remote administration is required, use key-based authentication, disable password authentication and direct root login.
 
 > - Mandatory Access Control
     Enforce process-level access controls beyond standard Unix permissions. (Limits the blast radius of a compromised process).
 
 > - Application Sandboxing
     Isolate high-risk applications from the rest of the system. (A browser should only have access to the network and downloads, a multimedia viewer should only have access to the file it is opening and nothing more).
-
-> - Backup Readiness
-    The operating system must support reliable backup and recovery procedures without compromising data integrity.
 
 > - Audit and Hardening Verification
     Periodically run a system hardening audit to identify misconfigurations and gaps.
