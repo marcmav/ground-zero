@@ -172,62 +172,35 @@ Establish a trusted communication path by minimizing network exposure, restricti
 Controls
 --------
 
-> - Default Deny Inbound
+> - Default Deny Inbound (Firewall)
     Block all inbound connections by default. Only explicitly permitted traffic should reach the machine.
 
-> - Outbound Filtering
+> - Outbound Filtering (Firewall)
     Restrict outbound connections to only what is necessary. Limits the impact of malware attempting to phone home or exfiltrate data.
 
-> - Network Firewall
-    Deny unsolicited inbound connections by default. Only expose services that are intentionally made available.
+> - Trusted Resolver
+    Route DNS queries through a resolver with a verified no-log policy and support for DoT/DoH and DNSSEC.
 
 > - Secure DNS
     Use a trusted DNS resolver that supports encrypted DNS where practical. Prevent DNS manipulation and unnecessary data exposure.
 
-> - Encrypted DNS
-    Prefer DNS over TLS (DoT) or DNS over HTTPS (DoH) when supported to protect DNS queries from passive observation and tampering.
+> - DNS over TLS / DNS over HTTPS
+    Encrypt DNS queries in transit. Unencrypted DNS exposes every domain you resolve to your ISP and any on-path observer.
 
-> - Secure Wi-Fi
-    Use WPA3 where available, or WPA2-AES if WPA3 is unavailable. Disable deprecated protocols such as WEP and WPA.
+> - DNSSEC Validation
+    Validate DNS responses are cryptographically signed and have not been tampered with in transit. (Prevents DNS spoofing and cache poisoning).
 
-> - Disable WPS
-    Disable Wi-Fi Protected Setup to eliminate an unnecessary attack surface.
+> - DNS Leak Prevention
+    Ensure all DNS queries are routed through the configured resolver and not leaking to the ISP or a default system resolver. Verify periodically.
+
+> - VPN
+    Route traffic through a trustworthy, audited and open-source VPN when operating on untrusted networks. A VPN shifts trust from the ISP or local network to the VPN provider so choose accordingly.
 
 > - Public Networks
     Treat public networks as hostile. Always use a VPN when accessing untrusted networks and avoid transmitting sensitive information without appropriate encryption.
 
-> - VPN
-    Use a VPN only when it provides a clear security or privacy benefit, such as protecting traffic on untrusted networks or reducing exposure to the local network.
-
---------
-Controls
---------
-
-> - DNS over TLS / DNS over HTTPS
-    Encrypt DNS queries in transit. Unencrypted DNS exposes every domain
-    you resolve to your ISP and any on-path observer.
-
-> - DNSSEC Validation
-    Validate DNS responses are cryptographically signed and have not been
-    tampered with in transit. (Prevents DNS spoofing and cache poisoning).
-
-> - Trusted Resolver
-    Route DNS queries through a resolver with a verified no-log policy and
-    support for DoT/DoH and DNSSEC. (Quad9, NextDNS, Mullvad DNS).
-
-> - DNS Leak Prevention
-    Ensure all DNS queries are routed through the configured resolver and
-    not leaking to the ISP or a default system resolver. Verify periodically.
-
-> - VPN
-    Route traffic through a trustworthy, audited and open-source VPN when
-    operating on untrusted networks. A VPN shifts trust from the ISP or
-    local network to the VPN provider — choose accordingly. (Mullvad,
-    ProtonVPN).
-
 > - Network Monitoring
-    Periodically audit active connections and listening ports to identify
-    unexpected outbound traffic or exposed services. (ss, netstat, nmap).
+    Periodically audit active connections and listening ports to identify unexpected outbound traffic or exposed services.
 
 
 ================
