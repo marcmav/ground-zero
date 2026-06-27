@@ -4,7 +4,7 @@ bedrock
 
 A playbook of the architectural root of my security model. It defines the foundational layers, principles and controls that every system must satisfy before it can be considered trusted.
 
-Scope: Bedrock defines the security architecture for personal computers. Infrastructure outside the host (e.g., routers or cloud infrastructure) is intentionally out of scope.
+Scope: Bedrock defines the security architecture for personal computers (The layers I can consistently control on every personal computer I own). Infrastructure outside the host (e.g., routers or cloud infrastructure) is intentionally out of scope.
 
 ==========================
 The Defense-in-Depth Model
@@ -188,13 +188,13 @@ Controls
     Validate DNS responses are cryptographically signed and have not been tampered with in transit. (Prevents DNS spoofing and cache poisoning).
 
 > - DNS Content Filtering
-    Upstream DNS infrastructure must utilize curated, aggressive blocklists to drop telemetry, tracking scripts, and known malware domains at the resolution phase before a connection can even be initiated.
+    Consider using DNS-based filtering to block known malicious domains, trackers and telemetry at the resolution phase before a connection can even be initiated.
 
 > - DNS Leak Prevention
     Ensure all DNS queries are routed through the configured resolver and not leaking to the ISP or a default system resolver. Verify periodically.
 
 > - VPN
-    Route traffic through a trustworthy, audited and open-source VPN when operating on untrusted networks. A VPN shifts trust from the ISP or local network to the VPN provider so choose accordingly.
+    Route traffic through a trustworthy, audited and open-source VPN provider with a transparent privacy policy, modern cryptography, and independent security audits when operating on untrusted networks. A VPN shifts trust from the ISP or local network to the VPN provider so choose accordingly.
 
 > - Mandatory Network Kill-Switch
     The system transport routing must enforce a strict kill-switch rule. If the encrypted VPN tunnel drops, all clear-text outbound traffic must be instantly blocked by the firewall rather than leaking over the fallback interface.
@@ -204,6 +204,12 @@ Controls
 
 > - Network Monitoring
     Periodically audit active connections and listening ports to identify unexpected outbound traffic or exposed services.
+
+> - Minimize Exposed Services
+    Disable or avoid exposing network services that are not explicitly required. Every listening service increases the remote attack surface.
+
+> - Secure Protocols
+    Prefer protocols that provide authentication and encryption by default. Avoid deprecated or insecure protocols whenever modern alternatives exist.
 
 
 ================
