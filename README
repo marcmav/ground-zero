@@ -128,7 +128,7 @@ Controls
     Daily activities should be performed as a standard user. Root privileges should only be used when required.
 
 > - SSH Hardening
-    If remote administration is required, use key-based authentication, disable password authentication and direct root login.
+    If remote administration is required, use key-based authentication only, disable password authentication and direct root login.
 
 > - Mandatory Access Control
     Enforce process-level access controls beyond standard Unix permissions. (Limits the blast radius of a compromised process).
@@ -142,6 +142,60 @@ Controls
 
 ================
 Layer 2: Network
+================
+
+The Network layer controls how the system communicates with other devices and external services. It establishes the trust boundary between the Compute layer and the Internet, controlling what traffic is permitted, where it is routed and how it is protected in transit. A compromised network can redirect, intercept or expose communications regardless of how secure the operating system is.
+
+note: Won't be talking about routers because its outside my scope.
+
+----------
+Components
+----------
+
+> - Firewall
+> - DNS
+> - VPN
+
+---------
+Principle
+---------
+
+Every network connection should be considered untrusted until proven otherwise. Communication must be explicitly permitted, minimally exposed and cryptographically protected whenever possible.
+
+---------
+Objective
+---------
+
+Establish a trusted communication path by minimizing network exposure, restricting unnecessary connectivity and ensuring the authenticity and confidentiality of network traffic.
+
+--------
+Controls
+--------
+
+> - Network Firewall
+    Deny unsolicited inbound connections by default. Only expose services that are intentionally made available.
+
+> - Secure DNS
+    Use a trusted DNS resolver that supports encrypted DNS where practical. Prevent DNS manipulation and unnecessary data exposure.
+
+> - Encrypted DNS
+    Prefer DNS over TLS (DoT) or DNS over HTTPS (DoH) when supported to protect DNS queries from passive observation and tampering.
+
+> - Secure Wi-Fi
+    Use WPA3 where available, or WPA2-AES if WPA3 is unavailable. Disable deprecated protocols such as WEP and WPA.
+
+> - Disable WPS
+    Disable Wi-Fi Protected Setup to eliminate an unnecessary attack surface.
+
+> - Public Networks
+    Treat public networks as hostile. Always use a VPN when accessing untrusted networks and avoid transmitting sensitive information without appropriate encryption.
+
+> - VPN
+    Use a VPN only when it provides a clear security or privacy benefit, such as protecting traffic on untrusted networks or reducing exposure to the local network.
+
+
+================
+Layer 3: Gateway
 ================
 
 
