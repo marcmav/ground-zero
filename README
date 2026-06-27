@@ -181,9 +181,6 @@ Controls
 > - Trusted Resolver
     Route DNS queries through a resolver with a verified no-log policy and support for DoT/DoH and DNSSEC.
 
-> - Secure DNS
-    Use a trusted DNS resolver that supports encrypted DNS where practical. Prevent DNS manipulation and unnecessary data exposure.
-
 > - DNS over TLS / DNS over HTTPS
     Encrypt DNS queries in transit. Unencrypted DNS exposes every domain you resolve to your ISP and any on-path observer.
 
