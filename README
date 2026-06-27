@@ -196,16 +196,15 @@ Controls
 > - VPN
     Route traffic through a trustworthy, audited and open-source VPN when operating on untrusted networks. A VPN shifts trust from the ISP or local network to the VPN provider so choose accordingly.
 
+> - Mandatory Network Kill-Switch
+    The system transport routing must enforce a strict kill-switch rule. If the encrypted VPN tunnel drops, all clear-text outbound traffic must be instantly blocked by the firewall rather than leaking over the fallback interface.
+
 > - Public Networks
     Treat public networks as hostile. Always use a VPN when accessing untrusted networks and avoid transmitting sensitive information without appropriate encryption.
 
 > - Network Monitoring
     Periodically audit active connections and listening ports to identify unexpected outbound traffic or exposed services.
 
-----------------------------------------------------
-
-> - Mandatory Network Kill-Switch
-    The system transport routing must enforce a strict kill-switch rule. If the encrypted VPN tunnel drops, all clear-text outbound traffic must be instantly blocked by the firewall rather than leaking over the fallback interface.
 
 ================
 Layer 3: Gateway
