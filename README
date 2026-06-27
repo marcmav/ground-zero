@@ -4,6 +4,8 @@ bedrock
 
 A playbook of the architectural root of my security model. It defines the foundational layers, principles and controls that every system must satisfy before it can be considered trusted.
 
+Scope: Bedrock defines the security architecture for personal computers. Infrastructure outside the host (e.g., routers or cloud infrastructure) is intentionally out of scope.
+
 ==========================
 The Defense-in-Depth Model
 ==========================
@@ -145,8 +147,6 @@ Layer 2: Network
 ================
 
 The Network layer controls how the machine communicates with external systems. It is the boundary between the local environment and the outside world. A misconfigured or unmonitored network layer exposes every layer above it to remote threats regardless of how well they are hardened.
-
-note: Won't be talking about routers because its outside my scope.
 
 ----------
 Components
