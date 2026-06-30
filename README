@@ -216,7 +216,7 @@ Controls
 Layer 3: Gateway
 ===============
 
-The Gateway layer is the point where the machine crosses into the open internet. It consists of the browser and search engine — the two primary interfaces through which external content is requested, rendered and interacted with. If this layer is misconfigured or untrusted, adversarial content reaches the machine regardless of how well the layers below it are hardened.
+The Gateway layer is the point where the machine crosses into the open internet. It consists of the browser and search engine, the two primary interfaces through which external content is requested, rendered and interacted with. If this layer is misconfigured or untrusted, adversarial content reaches the machine regardless of how well the layers below it are hardened.
 
 ----------
 Components
@@ -242,22 +242,22 @@ Controls
 --------
 
 > - Browser Selection
-    Use an open-source browser with a transparent security model and an active security patch cadence. (Firefox, LibreWolf).
+    Use an open-source browser with a transparent security model and an active security patch cadence.
 
 > - Browser Hardening
-    Apply strict configuration changes beyond default settings to reduce fingerprinting, disable telemetry and restrict passive data collection. (arkenfox user.js or equivalent).
+    Apply strict configuration changes beyond default settings to reduce fingerprinting, disable telemetry and restrict passive data collection.
 
 > - Extension Minimization
-    Install only extensions that serve a defined security or privacy purpose. Every extension runs with elevated browser privileges and is a potential attack vector.
+    Install only extensions that serve a defined security or privacy purpose. (Every extension runs with elevated browser privileges and is a potential attack vector).
 
 > - Content Blocking
-    Block ads, trackers and malicious scripts at the browser level as a second layer of defense after DNS filtering. (uBlock Origin in medium mode).
+    Block ads, trackers and malicious scripts at the browser level as a second layer of defense after DNS filtering.
 
 > - URL Tracking Stripping
     Strip tracking parameters from URLs before requests are made. (ClearURLs).
 
 > - Container Isolation
-    Isolate browsing contexts into separate containers to prevent cross-site cookie sharing and identity correlation. (Firefox Multi-Account Containers).
+    Isolate browsing contexts into separate profiles to prevent cross-site cookie sharing and identity correlation.
 
 > - HTTPS Enforcement
     Enforce HTTPS-only mode. Refuse to load resources over unencrypted connections.
@@ -266,7 +266,7 @@ Controls
     Deny browser access to camera, microphone, location and notifications by default. Grant permissions only when explicitly required and revoke immediately after.
 
 > - Search Engine Selection
-    Use a private, non-profiling search engine that does not build a behavioral profile or correlate queries to an identity. (Brave Search, SearXNG).
+    Use a private, non-profiling search engine that does not build a behavioral profile or correlate queries to an identity.
 
 > - Search Isolation
     Search queries must not be tied to an authenticated account or a persistent identity. Avoid signing into any account within the primary browsing context.
