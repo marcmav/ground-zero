@@ -242,7 +242,7 @@ Controls
 --------
 
 > - Browser Selection
-    Use an open-source browser with a transparent security model, an active security patch cadence and advanced sandboxing capabilities. (Avoid closed-source browsers that enforce opaque profiling or aggregate user tracking data).
+    Use an open-source browser with a transparent security model, an active security patch cadence and advanced process isolation. (Avoid closed-source browsers that enforce opaque profiling or aggregate user tracking data).
 
 > - Browser Hardening
     Apply strict configuration changes beyond default settings to reduce fingerprinting, disable telemetry and restrict passive data collection.
@@ -253,11 +253,20 @@ Controls
 > - Content Blocking
     Block ads, trackers, frame injections and malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only on explicit cases.
 
+> - JavaScript Exposure
+    Restrict or disable JavaScript where practical. When full functionality is required, execute active content only from trusted websites.
+
 > - URL Tracking Stripping
     Strip tracking parameters from URLs before requests are made. (Prevents the linkage of distinct browsing sessions across different services).
 
+> - Cookie Management
+    Limit persistent cookies and regularly clear browsing data. Isolate website state to reduce cross-site tracking.
+
 > - Container Isolation
     Isolate browsing contexts into separate profiles to prevent cross-site cookie sharing and identity correlation.
+
+> - Browser Profile Separation
+    Separate activities into distinct browser profiles according to their trust level or purpose (e.g., banking, work, personal and disposable). (This limits the impact of account compromise and cross-site tracking).
 
 > - HTTPS Enforcement
     Enforce HTTPS-only mode. Refuse to load resources over unencrypted connections.
@@ -272,17 +281,24 @@ Controls
     Deny browser access to camera, microphone, location and notifications by default. Grant permissions only when explicitly required and revoke immediately after.
 
 > - Search Engine Selection
-    Use a independent, non-profiling search engine that does not build a behavioral profile or correlate queries to an identity.
+    Use an independent, non-profiling search engine that does not build a behavioral profile or correlate queries to an identity.
 
 > - Search Isolation
     Search queries must not be tied to an authenticated account or a persistent identity. Avoid signing into any account within the primary browsing context.
 
+> - Download Verification
+    Treat every downloaded file as untrusted until its integrity and origin have been verified.
 
+> - Safe Browsing Habits
+    Do not execute software or follow instructions from untrusted sources without independently verifying their authenticity.
+
+# TODO document profile tiers.
+    tier 0.
 > - Cache and History Lifecycle
     Configure the gateway to automatically purge cookies, site data, and browsing history upon closing the application instance.
-
 > - Fingerprint Mitigation
     Enable native browser protections that obscure hardware specifications, installed fonts, and canvas rendering characteristics to resist unique browser fingerprinting.
+
 
 ====================
 Layer 4: Credentials
