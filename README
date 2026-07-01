@@ -14,7 +14,7 @@ Security is engineered sequentially from the system's lowest trust boundary outw
 
 [ Layer 5: Alias ] --- Identity
     [ Layer 4: Credentials ] --- Password Manager, TOTP
-        [ Layer 3: Gateway ] --- Web Browser, Search Engine
+        [ Layer 3: Gateway ] --- Browser, Search Engine
             [ Layer 2: Network ] --- Firewall, DNS, VPN
                 [ Layer 1: Compute ] --- Operating System
                     [ Layer 0: Core ] --- Firmware, Bootloader
@@ -222,7 +222,7 @@ The Gateway layer is the point where the machine crosses into the open internet.
 Components
 ----------
 
-> - Web Browser
+> - Browser
 > - Search Engine
 
 ---------
@@ -242,7 +242,7 @@ Controls
 --------
 
 > - Browser Selection
-    Use an open-source browser with a transparent security model and an active security patch cadence.
+    Use an open-source browser with a transparent security model, an active security patch cadence and advanced sandboxing capabilities. (Avoid closed-source browsers that enforce opaque profiling or aggregate user tracking data).
 
 > - Browser Hardening
     Apply strict configuration changes beyond default settings to reduce fingerprinting, disable telemetry and restrict passive data collection.
@@ -251,7 +251,7 @@ Controls
     Install only extensions that serve a defined security or privacy purpose. (Every extension runs with elevated browser privileges and is a potential attack vector).
 
 > - Content Blocking
-    Block ads, trackers and malicious scripts at the browser level as a second layer of defense after DNS filtering.
+    Block ads, trackers, frame injections and malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only on explicit cases.
 
 > - URL Tracking Stripping
     Strip tracking parameters from URLs before requests are made. (ClearURLs).
@@ -272,11 +272,7 @@ Controls
     Search queries must not be tied to an authenticated account or a persistent identity. Avoid signing into any account within the primary browsing context.
 
 
-> - Browser Infrastructure Selection
-    Utilize an open-source web browser engine with an established track record of rapid patch cycles and advanced sandboxing capabilities. (Avoid closed-source browsers that enforce opaque profiling or aggregate user tracking data).
-
 > - Content Filtering (Hard Mode)
-    Enforce global, wide-spectrum content blocking at the application layer via tools like uBlock Origin. Block all third-party scripts, remote tracking beacons, and frame injections by default, enabling them only on an explicit, case-by-case basis.
 
 > - WebRTC Hardening
     Disable or strictly confine WebRTC functionality within the browser parameters. (Prevents remote servers or scripts from discovering the machine's true local IP address behind a VPN tunnel).
