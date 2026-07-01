@@ -254,7 +254,7 @@ Controls
     Block ads, trackers, frame injections and malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only on explicit cases.
 
 > - URL Tracking Stripping
-    Strip tracking parameters from URLs before requests are made. (ClearURLs).
+    Strip tracking parameters from URLs before requests are made. (Prevents the linkage of distinct browsing sessions across different services).
 
 > - Container Isolation
     Isolate browsing contexts into separate profiles to prevent cross-site cookie sharing and identity correlation.
