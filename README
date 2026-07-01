@@ -262,6 +262,12 @@ Controls
 > - HTTPS Enforcement
     Enforce HTTPS-only mode. Refuse to load resources over unencrypted connections.
 
+> - WebRTC Hardening
+    Disable or strictly confine WebRTC functionality within the browser parameters. (Prevents remote servers or scripts from discovering the machine's true local IP address behind a VPN tunnel).
+
+> - First-Party Isolation & Partitioning
+    Enforce strict state partitioning and cookie isolation. Cookies, local storage, and caches must be separated by the top-level domain. (Prevents tracking networks from profiling your activities across completely different websites).
+
 > - Permission Minimization
     Deny browser access to camera, microphone, location and notifications by default. Grant permissions only when explicitly required and revoke immediately after.
 
