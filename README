@@ -294,13 +294,6 @@ Controls
 > - Safe Browsing Habits
     Do not execute software or follow instructions from untrusted sources without independently verifying their authenticity.
 
-# TODO document profile tiers.
-    tier 0.
-> - Cache and History Lifecycle
-    Configure the gateway to automatically purge cookies, site data, and browsing history upon closing the application instance.
-> - Fingerprint Mitigation
-    Enable native browser protections that obscure hardware specifications, installed fonts, and canvas rendering characteristics to resist unique browser fingerprinting.
-
 
 ====================
 Layer 4: Credentials
