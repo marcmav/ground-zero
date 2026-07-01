@@ -218,6 +218,8 @@ Layer 3: Gateway
 
 The Gateway layer is the point where the machine crosses into the open internet. It consists of the browser and search engine, the two primary interfaces through which external content is requested, rendered and interacted with. If this layer is misconfigured or untrusted, adversarial content reaches the machine regardless of how well the layers below it are hardened.
 
+Future Update: Will document about browser profile tiers later.
+
 ----------
 Components
 ----------
