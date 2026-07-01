@@ -14,7 +14,7 @@ Security is engineered sequentially from the system's lowest trust boundary outw
 
 [ Layer 5: Alias ] --- Identity
     [ Layer 4: Credentials ] --- Password Manager, TOTP
-        [ Layer 3: Gateway ] --- Browser, Search Engine
+        [ Layer 3: Gateway ] --- Web Browser, Search Engine
             [ Layer 2: Network ] --- Firewall, DNS, VPN
                 [ Layer 1: Compute ] --- Operating System
                     [ Layer 0: Core ] --- Firmware, Bootloader
@@ -222,7 +222,7 @@ The Gateway layer is the point where the machine crosses into the open internet.
 Components
 ----------
 
-> - Browser
+> - Web Browser
 > - Search Engine
 
 ---------
@@ -272,8 +272,32 @@ Controls
     Search queries must not be tied to an authenticated account or a persistent identity. Avoid signing into any account within the primary browsing context.
 
 
-=================
-Layer 4: Identity
-=================
+> - Browser Infrastructure Selection
+    Utilize an open-source web browser engine with an established track record of rapid patch cycles and advanced sandboxing capabilities. (Avoid closed-source browsers that enforce opaque profiling or aggregate user tracking data).
+
+> - Content Filtering (Hard Mode)
+    Enforce global, wide-spectrum content blocking at the application layer via tools like uBlock Origin. Block all third-party scripts, remote tracking beacons, and frame injections by default, enabling them only on an explicit, case-by-case basis.
+
+> - WebRTC Hardening
+    Disable or strictly confine WebRTC functionality within the browser parameters. (Prevents remote servers or scripts from discovering the machine's true local IP address behind a VPN tunnel).
+
+> - First-Party Isolation & Partitioning
+    Enforce strict state partitioning and cookie isolation. Cookies, local storage, and caches must be separated by the top-level domain. (Prevents tracking networks from profiling your activities across completely different websites).
+
+> - Cache and History Lifecycle
+    Configure the gateway to automatically purge cookies, site data, and browsing history upon closing the application instance.
+
+> - Privacy-Centric Search Engine
+    Utilize an independent search index that does not track search queries, log IP addresses, or build persistent user interest profiles (e.g., Brave Search).
+
+> - Query Stripping
+    Remove tracking parameters (e.g., `?utm_source=`, `?fbclid=`) from URLs before navigating or sharing links. (Prevents the linkage of distinct browsing sessions across different services).
+
+> - Fingerprint Mitigation
+    Enable native browser protections that obscure hardware specifications, installed fonts, and canvas rendering characteristics to resist unique browser fingerprinting.
+
+====================
+Layer 4: Credentials
+====================
 
 
