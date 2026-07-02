@@ -285,10 +285,11 @@ Profile Tiers
 
 Browser activity is separated into distinct profiles according to trust level and purpose. Each tier operates under a different set of permissions, extensions and hardening settings. A session in a lower-trust tier must never share state, cookies or identity with a higher-trust tier.
 
-[ Tier 3: Disposable ]
-    [ Tier 2: Personal ]
-        [ Tier 1: Professional ]
-            [ Tier 0: Root ]
+[ Tier 0: Root ]
+    [ Tier 1: Professional ]
+        [ Tier 2: Personal ]
+            [ Tier 3: Disposable ]
+
 
 > - Tier 0: Root
     Used exclusively for sensitive authenticated sessions such as banking, government services, password manager and primary email.
