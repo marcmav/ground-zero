@@ -230,7 +230,6 @@ Principle
 ---------
 
 The browser is the largest attack surface on a modern machine. It executes arbitrary remote code, renders untrusted content and manages persistent state across sessions. Every extension, setting and permission granted is a trust decision.
-
 ---------
 Objective
 ---------
