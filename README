@@ -268,8 +268,8 @@ Controls
 > - Cookie Management
     Limit persistent cookies and regularly clear browsing data. Isolate website state to reduce cross-site tracking.
 
-> - Container Isolation
-    Isolate browsing contexts into separate profiles to prevent cross-site cookie sharing and identity correlation.
+> - Identity Compartmentalization
+    Separate browsing activities into distinct browser profiles or containers according to their trust tier. (This prevents cross-site tracking, reduces credential exposure and limits the impact of browser compromise).
 
 > - First-Party Isolation & Partitioning
     Enforce strict state partitioning and cookie isolation. Cookies, local storage and caches must be separated by the top-level domain. (Prevents tracking networks from profiling activities across different websites).
