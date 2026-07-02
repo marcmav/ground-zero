@@ -256,7 +256,7 @@ Controls
     Install only extensions that serve a defined security or privacy purpose. (Every extension runs with elevated browser privileges and is a potential attack vector).
 
 > - Content Blocking
-    Block advertisement, trackers and known malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only in explicit cases. (Reduces both privacy exposure and the likelihood of malicious script execution).
+    Block advertisements, trackers and known malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only in explicit cases. (Reduces both privacy exposure and the likelihood of malicious script execution).
 
 > - URL Tracking Stripping
     Strip tracking parameters from URLs before requests are made. (Prevents the linkage of distinct browsing sessions across different services).
