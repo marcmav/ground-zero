@@ -245,7 +245,7 @@ Controls
     Use an open-source browser with a transparent security model, an active security patch cadence and advanced process isolation. (Avoid closed-source browsers that enforce opaque profiling or aggregate user tracking data).
 
 > - Browser Hardening
-    Apply strict configuration changes beyond default settings to reduce fingerprinting, disable telemetry and restrict passive data collection.
+    Apply a hardened browser configuration that minimizes telemetry, reduces browser fingerprinting and disables unnecessary features.
 
 > - HTTPS Enforcement
     Enforce HTTPS-only mode. Refuse to load resources over unencrypted connections.
@@ -257,7 +257,7 @@ Controls
     Install only extensions that serve a defined security or privacy purpose. (Every extension runs with elevated browser privileges and is a potential attack vector).
 
 > - Content Blocking
-    Block ads, trackers, frame injections and malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only in explicit cases.
+    Block advertisement, trackers and known malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only in explicit cases. (Reduces both privacy exposure and the likelihood of malicious script execution).
 
 > - JavaScript Exposure
     Restrict or disable JavaScript where practical. When full functionality is required, execute active content only from trusted websites.
