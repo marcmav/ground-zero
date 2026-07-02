@@ -259,9 +259,6 @@ Controls
 > - Content Blocking
     Block advertisement, trackers and known malicious scripts at the browser level by default as a second layer of defense after DNS filtering, enabling them only in explicit cases. (Reduces both privacy exposure and the likelihood of malicious script execution).
 
-> - JavaScript Exposure
-    Restrict or disable JavaScript where practical. When full functionality is required, execute active content only from trusted websites.
-
 > - URL Tracking Stripping
     Strip tracking parameters from URLs before requests are made. (Prevents the linkage of distinct browsing sessions across different services).
 
