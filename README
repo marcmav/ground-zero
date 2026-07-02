@@ -234,7 +234,7 @@ The browser is the largest attack surface on a modern machine. It executes arbit
 Objective
 ---------
 
-Deploy a hardened, open-source browser with a minimal extension set, strict context separation across profile tiers and route all search queries through a private, non-profiling search engine.
+Deploy a hardened browser that minimizes exposed attack surface, enforces strict identity compartmentalization and safely mediates interactions with untrusted web content.
 
 --------
 Controls
