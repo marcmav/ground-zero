@@ -298,7 +298,7 @@ Browser activity is separated into distinct profiles according to trust level an
             [ Tier 0: Root ]
 
 > - Tier 0: Root
-    Used exclusively for sensitive authenticated sessions such as banking, government services, root identities and primary email.
+    Used exclusively for sensitive authenticated sessions such as banking, government services, password manager and primary email.
 
 > - Tier 1: Professional
     Used for operational workflows, technical research, professional accounts and trusted learning resources.
