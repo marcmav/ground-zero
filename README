@@ -293,12 +293,15 @@ Browser activity is separated into distinct profiles according to trust level an
 
 > - Tier 0: Root
     Used exclusively for sensitive authenticated sessions such as banking, government services, password manager and primary email.
+    Maximum hardening. No general browsing. No extensions beyond essentials.
 
 > - Tier 1: Professional
     Used for operational workflows, technical research, professional accounts and trusted learning resources.
+    Strict hardening. No extensions beyond essentials.
 
 > - Tier 2: Personal
     Used for daily personal tasks, general media consumption and streaming.
+    Moderate hardening. Standard extension set active.
 
 > - Tier 3: Disposable
     Used for investigating unknown links, testing untrusted web applications, and performing general and transient clear-net lookup.
