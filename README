@@ -297,20 +297,17 @@ Browser activity is separated into distinct profiles according to trust level an
         [ Tier 1: Professional ]
             [ Tier 0: Root ]
 
-> - Tier 0: Hardened / Paranoid
-    Maximum restrictions. JavaScript disabled by default. No persistent cookies. No extensions beyond a content blocker. Used for anonymous research, unknown links and high-sensitivity browsing where identity must not be exposed under any circumstance.
+> - Tier 0: Root
+    Used exclusively for sensitive authenticated sessions such as banking, government services, root identities and primary email.
 
-> - Tier 1: Secure / Daily
-    Strict hardening applied. JavaScript enabled only on trusted sites. Full extension set active. No accounts signed in. Used for general daily browsing, search and reading where privacy is the priority.
+> - Tier 1: Professional
+    Used for operational workflows, technical research, professional accounts and trusted learning resources.
 
-> - Tier 2: Functional / Trusted
-    Moderate hardening. JavaScript permitted. Signed-in accounts allowed for services that require authentication. Used for productivity, development tools and trusted web applications.
+> - Tier 2: Personal
+    Used for daily personal tasks, general media consumption and streaming.
 
-> - Tier 3: Authenticated / Personal
-    Standard hardening. Used exclusively for sensitive authenticated sessions such as banking, government services and primary email. Never used for general browsing. Sessions are isolated and terminated after use.
-
-> - Tier 4: Disposable / Sandboxed
-    Temporary profile or isolated browser instance. No persistent state. Used for untrusted links, one-time access and anything that must leave no trace. Destroyed or reset after each session.
+> - Tier 3: Disposable
+    Used for investigating unknown links, testing untrusted web applications, and performing general and transient clear-net lookup.
 
 
 ====================
